@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+
+<StackPane xmlns="http://javafx.com/javafx/17"
+           xmlns:fx="http://javafx.com/fxml/1"
+           fx:controller="com.dextrack.WidgetController"
+           fx:id="rootPane"
+           prefWidth="300" prefHeight="300"
+           style="-fx-background-color: transparent;">
+
+    <!-- Circular glow layer — Region with full border-radius so dropshadow is round -->
+    <Region fx:id="glowRegion"
+            prefWidth="216" prefHeight="216"
+            maxWidth="216" maxHeight="216"
+            styleClass="widget-glow"/>
+
+    <!-- Dark background circle -->
+    <Region prefWidth="210" prefHeight="210"
+            maxWidth="210" maxHeight="210"
+            styleClass="widget-bg"/>
+
+    <!-- Thin inner border ring -->
+    <Region prefWidth="208" prefHeight="208"
+            maxWidth="208" maxHeight="208"
+            styleClass="widget-ring"/>
+
+    <!-- Content -->
+    <VBox alignment="CENTER" spacing="0" pickOnBounds="false" maxWidth="200">
+
+        <HBox alignment="CENTER" spacing="4">
+            <Label fx:id="glucoseLabel" text="---" styleClass="widget-glucose"/>
+            <Label fx:id="trendLabel" text="" styleClass="widget-trend"/>
+        </HBox>
+
+        <Label text="mg/dL" styleClass="widget-unit"/>
+
+        <Region prefHeight="10"/>
+        <Line startX="0" endX="55" style="-fx-stroke: rgba(255,255,255,0.1); -fx-stroke-width: 1;"/>
+        <Region prefHeight="8"/>
+
+        <Label fx:id="tirLabel" text="TIR —" styleClass="widget-tir"/>
+        <Label fx:id="timestampLabel" text="" styleClass="widget-time"/>
+    </VBox>
+
+    <!-- Drag-hint dot -->
+    <Circle centerX="150" centerY="26" radius="3"
+            style="-fx-fill: rgba(255,255,255,0.15);"/>
+
+</StackPane>

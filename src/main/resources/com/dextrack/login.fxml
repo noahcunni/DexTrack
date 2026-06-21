@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox xmlns="http://javafx.com/javafx/17"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.dextrack.LoginController"
+      styleClass="login-root"
+      alignment="CENTER"
+      spacing="14"
+      prefWidth="360" minHeight="360">
+    <padding><Insets top="40" bottom="40" left="36" right="36"/></padding>
+
+    <Label text="DexTrack" styleClass="app-title"/>
+    <Label text="Enter your Dexcom API credentials" styleClass="subtitle"/>
+
+    <Region prefHeight="6"/>
+
+    <TextField fx:id="clientIdField" promptText="Client ID" styleClass="input-field"/>
+
+    <HBox spacing="6" alignment="CENTER_LEFT">
+        <PasswordField fx:id="clientSecretField" promptText="Client Secret" styleClass="input-field" HBox.hgrow="ALWAYS"/>
+        <TextField fx:id="clientSecretVisible" promptText="Client Secret" styleClass="input-field" managed="false" visible="false" HBox.hgrow="ALWAYS"/>
+        <Button fx:id="toggleBtn" text="Show" onAction="#onToggleSecret" styleClass="btn-toggle"/>
+    </HBox>
+
+    <Region prefHeight="4"/>
+
+    <Button text="Connect" onAction="#onLogin" styleClass="btn-primary" maxWidth="Infinity"/>
+
+    <Label fx:id="statusLabel" styleClass="status-label" wrapText="true"
+           textAlignment="CENTER" maxWidth="Infinity"/>
+
+    <Region prefHeight="4"/>
+    <Label styleClass="hint" wrapText="true" textAlignment="CENTER" maxWidth="Infinity"
+           text="Get credentials at developer.dexcom.com — set redirect URI to http://localhost:9000/callback"/>
+</VBox>

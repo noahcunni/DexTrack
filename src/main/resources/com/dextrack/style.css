@@ -1,0 +1,154 @@
+/* ── Login window ─────────────────────────────────────────────────── */
+
+.login-root {
+    -fx-background-color: #0d0d1f;
+}
+
+.app-title {
+    -fx-font-size: 30px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #e0e0f0;
+    -fx-font-family: "Segoe UI";
+}
+
+.subtitle {
+    -fx-font-size: 13px;
+    -fx-text-fill: #5a5a80;
+    -fx-font-family: "Segoe UI";
+}
+
+.input-field {
+    -fx-background-color: #1a1a38;
+    -fx-text-fill: #d0d0ee;
+    -fx-prompt-text-fill: #44446a;
+    -fx-background-radius: 8;
+    -fx-padding: 10 14 10 14;
+    -fx-font-size: 13px;
+    -fx-font-family: "Segoe UI";
+    -fx-border-color: transparent;
+}
+
+.input-field:focused {
+    -fx-background-color: #1e1e44;
+    -fx-border-color: #3a3a7a;
+    -fx-border-radius: 8;
+    -fx-border-width: 1;
+}
+
+.btn-primary {
+    -fx-background-color: linear-gradient(to bottom right, #6c63ff, #4a42dd);
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+    -fx-background-radius: 8;
+    -fx-padding: 11 0 11 0;
+    -fx-cursor: hand;
+    -fx-font-family: "Segoe UI";
+    -fx-effect: dropshadow(gaussian, rgba(108,99,255,0.4), 12, 0.3, 0, 3);
+}
+
+.btn-primary:hover {
+    -fx-background-color: linear-gradient(to bottom right, #7d75ff, #5a52ee);
+}
+
+.status-label {
+    -fx-font-size: 12px;
+    -fx-text-fill: #666688;
+    -fx-font-family: "Segoe UI";
+    -fx-padding: 6 10 6 10;
+    -fx-background-radius: 6;
+}
+
+.btn-toggle {
+    -fx-background-color: #1a1a38;
+    -fx-text-fill: #5a5a80;
+    -fx-font-size: 11px;
+    -fx-font-family: "Segoe UI";
+    -fx-background-radius: 6;
+    -fx-padding: 8 10 8 10;
+    -fx-cursor: hand;
+    -fx-min-width: 46px;
+}
+
+.btn-toggle:hover {
+    -fx-background-color: #22223a;
+    -fx-text-fill: #9090b0;
+}
+
+.check-label {
+    -fx-text-fill: #5a5a80;
+    -fx-font-size: 12px;
+    -fx-font-family: "Segoe UI";
+}
+
+.check-label .box {
+    -fx-background-color: #1a1a38;
+    -fx-background-radius: 4;
+    -fx-border-color: #33336a;
+    -fx-border-radius: 4;
+    -fx-border-width: 1;
+}
+
+.hint {
+    -fx-font-size: 11px;
+    -fx-text-fill: #33334a;
+    -fx-font-style: italic;
+    -fx-font-family: "Segoe UI";
+}
+
+/* ── Circular Widget ──────────────────────────────────────────────── */
+
+.widget-glow {
+    -fx-background-color: rgba(46,204,113,0.08);
+    -fx-background-radius: 108;
+    -fx-effect: dropshadow(gaussian, rgba(46,204,113,0.85), 50, 0.7, 0, 0);
+}
+
+.widget-bg {
+    -fx-background-color: #12122a;
+    -fx-background-radius: 105;
+}
+
+.widget-ring {
+    -fx-background-color: transparent;
+    -fx-border-color: rgba(255,255,255,0.07);
+    -fx-border-radius: 104;
+    -fx-border-width: 1;
+}
+
+
+.widget-glucose {
+    -fx-font-size: 62px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #2ecc71;
+    -fx-font-family: "Segoe UI";
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.6), 6, 0, 0, 2);
+}
+
+.widget-trend {
+    -fx-font-size: 24px;
+    -fx-text-fill: #2ecc71;
+    -fx-font-family: "Segoe UI";
+    -fx-padding: 0 0 10 0;
+}
+
+.widget-unit {
+    -fx-font-size: 11px;
+    -fx-text-fill: rgba(255,255,255,0.3);
+    -fx-font-family: "Segoe UI";
+    -fx-padding: 0 0 0 0;
+}
+
+.widget-tir {
+    -fx-font-size: 13px;
+    -fx-font-weight: bold;
+    -fx-text-fill: rgba(255,255,255,0.65);
+    -fx-font-family: "Segoe UI";
+}
+
+.widget-time {
+    -fx-font-size: 10px;
+    -fx-text-fill: rgba(255,255,255,0.22);
+    -fx-font-family: "Segoe UI";
+    -fx-padding: 3 0 0 0;
+}
