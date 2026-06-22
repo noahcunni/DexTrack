@@ -1,8 +1,15 @@
 # DexTrack
-
 I got tired of opening my phone when working to check my blood sugar, and then getting sucked down a rabithole of doom scrolling, so I built this.
 
 A little always-on desktop widget that shows your blood glucose readings, the trend arrow, and your time-in-range for the day. It's basically a small floating circle that sits in the corner of the screen so I can keep an eye on my numbers when working.
+
+## Pics
+
+<p align="center">
+  <img src="docs/DexTrack_1.png" alt="In range" width="220">
+  <img src="docs/DexTrack_2.png" alt="High" width="220">
+  <img src="docs/DexTrack_3.png" alt="Low" width="220">
+</p>
 
 ## What it does
 

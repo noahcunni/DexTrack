@@ -1,9 +1,20 @@
 package com.dextrack;
 
+import static java.lang.String.valueOf;
+import java.time.Instant;
+import java.time.ZoneId;
+import java.time.format.DateTimeFormatter;
+import java.time.temporal.ChronoUnit;
+import java.util.List;
+import java.util.concurrent.Executors;
+import java.util.concurrent.ScheduledExecutorService;
+import java.util.concurrent.TimeUnit;
+
 import com.dextrack.api.DexcomAuth;
 import com.dextrack.api.DexcomClient;
 import com.dextrack.api.DexcomClient.UnauthorizedException;
 import com.dextrack.model.GlucoseReading;
+
 import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.scene.control.ContextMenu;
@@ -13,15 +24,6 @@ import javafx.scene.control.SeparatorMenuItem;
 import javafx.scene.layout.Region;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
-
-import java.time.Instant;
-import java.time.ZoneId;
-import java.time.format.DateTimeFormatter;
-import java.time.temporal.ChronoUnit;
-import java.util.List;
-import java.util.concurrent.Executors;
-import java.util.concurrent.ScheduledExecutorService;
-import java.util.concurrent.TimeUnit;
 
 public class WidgetController {
 
@@ -116,8 +118,8 @@ public class WidgetController {
     }
 
     private void applyReading(GlucoseReading reading, double tir) {
-        int val = reading.getValue();
-        glucoseLabel.setText(String.valueOf(val));
+        int val = reading.getValue(); // DONT MESS THIS UP !!!!
+        glucoseLabel.setText(valueOf(val));
         trendLabel.setText(reading.getTrend().arrow);
         tirLabel.setText(String.format("TIR %.0f%%", tir));
         timestampLabel.setText(TIME_FMT.format(reading.getTimestamp()));

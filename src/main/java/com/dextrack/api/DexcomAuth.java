@@ -15,7 +15,7 @@ import com.google.gson.JsonParser;
 public class DexcomAuth {
 
     // Set SANDBOX = false and fill in real credentials for production use
-    public static final boolean SANDBOX = false;
+    public static final boolean SANDBOX = true;
 
     private static final String BASE_URL = SANDBOX
             ? "https://sandbox-api.dexcom.com"
