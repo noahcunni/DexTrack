@@ -3,7 +3,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.geometry.Insets?>
 
-<VBox xmlns="http://javafx.com/javafx/17"
+<VBox xmlns="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
       xmlns:fx="http://javafx.com/fxml/1"
       fx:controller="com.dextrack.LoginController"
       styleClass="login-root"
@@ -11,28 +11,35 @@
       spacing="14"
       prefWidth="360" minHeight="360">
     <padding><Insets top="40" bottom="40" left="36" right="36"/></padding>
-
+<!-- Title -->
     <Label text="DexTrack" styleClass="app-title"/>
     <Label text="Enter your Dexcom API credentials" styleClass="subtitle"/>
-
+<!-- Empty box for spacing -->
     <Region prefHeight="6"/>
 
+<!-- Input for id -->
     <TextField fx:id="clientIdField" promptText="Client ID" styleClass="input-field"/>
 
+<!-- Swap out password visibilty with seperate boxes -->
     <HBox spacing="6" alignment="CENTER_LEFT">
         <PasswordField fx:id="clientSecretField" promptText="Client Secret" styleClass="input-field" HBox.hgrow="ALWAYS"/>
         <TextField fx:id="clientSecretVisible" promptText="Client Secret" styleClass="input-field" managed="false" visible="false" HBox.hgrow="ALWAYS"/>
         <Button fx:id="toggleBtn" text="Show" onAction="#onToggleSecret" styleClass="btn-toggle"/>
     </HBox>
 
+<!-- Empy box for spacing -->
     <Region prefHeight="4"/>
 
+<!-- Login button -->
     <Button text="Connect" onAction="#onLogin" styleClass="btn-primary" maxWidth="Infinity"/>
 
+<!-- Update based on login info and access -->
     <Label fx:id="statusLabel" styleClass="status-label" wrapText="true"
            textAlignment="CENTER" maxWidth="Infinity"/>
-
+<!-- Empty box -->
     <Region prefHeight="4"/>
+
+<!-- info -->
     <Label styleClass="hint" wrapText="true" textAlignment="CENTER" maxWidth="Infinity"
            text="Get credentials at developer.dexcom.com — set redirect URI to http://localhost:9000/callback"/>
 </VBox>

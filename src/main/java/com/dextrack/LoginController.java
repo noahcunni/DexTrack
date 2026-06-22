@@ -1,19 +1,20 @@
 package com.dextrack;
 
+import java.awt.Desktop;
+import java.net.URI;
+import java.util.concurrent.TimeUnit;
+import java.util.function.BiConsumer;
+
 import com.dextrack.api.CallbackServer;
 import com.dextrack.api.DexcomAuth;
 import com.dextrack.api.DexcomClient;
+
 import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
-
-import java.awt.Desktop;
-import java.net.URI;
-import java.util.concurrent.TimeUnit;
-import java.util.function.BiConsumer;
 
 public class LoginController {
 
